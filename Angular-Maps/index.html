@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html >
+       <head>
+       <meta charset="UTF-8"> <!--- Formato que permite la codificación de caracteres -->
+       <title>Angular Maps</title> <!-- Titulo de la página -->
+       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular-sanitize.min.js"></script>
+       <script src="ng-csv-0.3.6/build/ng-csv.js"></script> 
+       <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+       <link rel="stylesheet" href="css/style.css"> <!-- Enlaces que traen los recursos de los estilos css -->
+
+  </head>
+  <body>
+
+       <script src="https://maps.googleapis.com/maps/api/js?key=&sensor=false&extension=.js"></script>
+       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+       <div ng-app="mapsApp" ng-controller="MapCtrl"> <!-- Conjunto de directivas -->
+       <div class="container">
+       <H3><strong><center> Mapa con angular </center></strong></H3> <!-- Título de la página web centrado y en negritas -->
+       <div></div>
+       
+       <!-- Estilos asignados al div y características-->
+       <div style="background:#900;">
+       <div class="slide-nav" style="width: 104px;">
+       <a class=" current"><span></span></a>
+       <span class="right"><a class="" >.<span></span></a></span>
+       </div><a></a></div>
+       <div></div>
+       <!-- <pre> {{cities | json}}</pre> -->
+
+    <!-- Formulario y modelos de texto con angular -->
+    <div class="row">
+      <div class="col-sm-12">
+        <label for="">Nombre</label>
+        <input type="text" class="form-control" ng-model="city" />  
+        <label for="">Descripción</label>
+        <input type="text" class="form-control" ng-model="desc" />
+        <label for="">Latitud</label>
+        <input type="text" class="form-control" ng-model="lat" />
+        <label for="">Longitud</label>
+        <input type="text" class="form-control" ng-model="long" />
+        <br>
+        <!-- Botón de nueva dirección -->
+        <button class="pull-right btn btn-success" ng-click="agregarDireccion()">Nueva Dirección</button>
+      </div>
+    </div>
+          <br / >
+          <div id="map"></div>
+          <br / >
+
+      <!-- Etiquetas de texto, formulario para rellenar nombre y  botón de exportación en .txt-->
+      <label for="filename"> Archivo </label>
+        <input type="text" placeholder="Nombre del archivo" ng-model="nombre" />
+      <a class="pull-center btn btn-success" ng-click="saveJSON()" ng-href="{{ url }}">Exportar a txt</a>
+      <div> <p> </p>
+      </div>
+      
+    <!--<div class="row">
+      <div class="col-sm-12">
+        <ul>
+            <li data-ng-repeat="item in cities">
+            {{item.city}}
+            <button ng-click="removeMarker($index)">Remover</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+        <!--  Carga del archivo javascript -->
+        <script src="js/index.js"></script>
+       
+        <!-- Asignación de estilo en div -->
+        <div style="background:#900;">
+        <div class="slide-nav" style="width: 104px;">
+        <a class=" current"><span></span></a>
+        <span class="right"><a class="" >.<span></span></a></span>
+             </div> </div>
+        <footer><h4><Center><strong> Proyecto elaborado para la asignatura de desarrollo de aplicaciones web </strong></center></h4></footer>
+
+
+  </body>
+</html>
